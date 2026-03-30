@@ -5,18 +5,18 @@ public class Main {
         Engine engine = new Engine();
         Turbo turbo = new Turbo();
         Lights lights = new Lights();
-        SportMode sportMode = new SportMode();
+        DriveMode sportMode = new DriveMode();
 
 
         engine.start();
         lights.on();
-        sportMode.enable();
+        sportMode.sportModeEnable();
         turbo.activate();
-        
+
         System.out.println("\nSports car is ready!\n");
 
         turbo.deactivate();
-        sportMode.disable();
+        sportMode.ecoModeEnable();
         lights.off();
         engine.stop();
     }
