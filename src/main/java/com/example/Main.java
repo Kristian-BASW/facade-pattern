@@ -2,33 +2,15 @@ package com.example;
 
 public class Main {
     public static void main(String[] args) {
-        Engine engine = new Engine();
-        Turbo turbo = new Turbo();
-        Suspension suspension = new Suspension();
-        Lights lights = new Lights();
-        DriveMode driveMode = new DriveMode();
+        SportsCarFacade sportsCarFacade = new SportsCarFacade();
+        System.out.println("\nThe user wants to start the car");
+        sportsCarFacade.startCar();
 
+        System.out.println("\nThe user wants to go for a race");
+        sportsCarFacade.activateSportMode();
 
-        engine.start();
-        lights.on();
-        driveMode.ecoModeEnable();
-        suspension.high();
-        turbo.activateLowPressure();
-
-        System.out.println("\nCar is ready!\n");
-
-        driveMode.sportModeEnable();
-        turbo.activateHighPressure();
-        suspension.low();
-
-        System.out.println("\nSports car is ready!\n");
-
-        turbo.activateLowPressure();
-        driveMode.ecoModeEnable();
-        lights.off();
-        engine.stop();
-
-        System.out.println("\nSports car has been shut down!\n");
+        System.out.println("\nThe user wants to stop the car");
+        sportsCarFacade.stopCar();
 
     }
 }
